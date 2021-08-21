@@ -1,5 +1,5 @@
 # Simple Metasploitable2 RootKit
-A single file rootkit used to establish persistance within a Metasploitable2 machine.
+A condensed, single file rootkit (```upload.php```) used to establish persistance within a Metasploitable2 machine.
 
 ## How to Use upload.php
 1. Navigate to the File Upload section of DVWA (```http://<ms2 ipaddr>/dvwa/vulnerabilities/upload/```) and upload the file as ```upload.php.jpeg```. This will subvert the filetype filter.
