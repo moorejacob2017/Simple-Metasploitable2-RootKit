@@ -18,7 +18,7 @@ __WARNING:__ It is recommended to clean tracks after exploiting, as the HTTP req
 
 This particular rootkit takes advantage of two vulnerabilities; the intial File Upload Vulnerability as an attack vector, and [CVE-2009-1185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1185) for privilege escalation, a vulnerability where udev < 1.4.1 does not verify whether a NETLINK message originates from kernel space.
 
-1. ```upload.php.jpeg``` recieves an HTTP request and begins to executes PHP code.
+1. ```upload.php.jpeg``` recieves an HTTP request and begins to execute PHP code.
 2. ```upload.php.jpeg``` exports a base64 encoded zip file to ```/tmp``` and extracts four files:
     - ```8572``` - x86 ELF used for privilege escalation ([exploit-db.com](https://www.exploit-db.com/exploits/8572))
     - ```run``` - Bash Script run with elevated privleges by ```8572```, sets up persistence and removes rootkit files
