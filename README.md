@@ -16,7 +16,7 @@ __WARNING:__ It is recommended to clean tracks after exploiting, as the HTTP req
 
 ## How upload.php Works
 
-This particular rootkit takes advantage of two vulnerabilities; the intial File Upload Vulnerability as an attack vector, and [CVE-2009-1185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1185) for privilege escalation, a vulnerability where udev < 1.4.1 does not verify whether a NETLINK message originates from kernel space.
+This particular rootkit takes advantage of two vulnerabilities; the initial File Upload Vulnerability as an attack vector, and [CVE-2009-1185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1185) for privilege escalation, a vulnerability where udev < 1.4.1 does not verify whether a NETLINK message originates from kernel space.
 
 1. ```upload.php.jpeg``` recieves an HTTP request and begins to execute PHP code.
 2. ```upload.php.jpeg``` exports a base64 encoded zip file to ```/tmp``` and extracts four files:
